@@ -544,6 +544,7 @@ margin: auto;
  fill: #2e2f42;
  border: 1px solid rgba(0, 0, 0, 0.1);
 display: flex;
+padding: 0;
 background-color: #e7e9fc;
 align-items: center;
 justify-content: center;
@@ -553,7 +554,7 @@ width: 24px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-button:hover,
-.modal-close-button:focus {
+.modal-close-button:focus + svg {
   background-color: #404bbf;
   fill: #fff;
   border: none;
@@ -585,6 +586,10 @@ padding-bottom: 16px;
     fill:#4d5ae5;
 }
 .modal-field{
+    margin-bottom: 8px; 
+}
+.modal-field-checkbox{
+    margin-bottom: 24px;
 }
 .modal-label{
     font-weight: 400;
@@ -607,6 +612,9 @@ color: #8e8f99
 .modal-icon-wrap{
     position: relative;
 }
+.modal-field-textarea{
+    margin-bottom: 16px;
+}
 .modal-textarea{
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
@@ -621,6 +629,9 @@ color: #8e8f99
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
+}
+.modal-textarea:focus{
+    border-color: #4D5AE5;
 }
 .modal-textarea::placeholder{
     font-weight: 400;
@@ -646,15 +657,13 @@ cursor: pointer;
 .checkbox-text{
     font-weight: 400;
 font-size: 12px;
-line-height: 1.16667;
+line-height: 1.17;
 letter-spacing: 0.04em;
 color: #8e8f99;
-display: flex;
-align-items: center;
 padding-bottom: 24px;
 }
 .modal-checkbox:checked + .checkbox-text span{
-border: none;
+    border: none;
 border-radius: 2px;
 background-color:  #404bbf;
 border: 1px solid #404bbf;
@@ -668,7 +677,8 @@ border: 1px solid #404bbf;
 text-decoration-skip-ink: none;
 color: #4d5ae5;
 }
-.checkbox-text span{
+.user-privacy-span{
+    display: inline-flex;
     width: 16px;
     height: 16px;
     border-radius: 2px;
@@ -678,12 +688,14 @@ display: flex;
 justify-content: center;
 align-items: center;
 fill:transparent;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-sent-button{
 display: flex;
 align-items: center;
 justify-content: center;
 }
+
 .text-send{
     font-weight: 500;
     font-size: 16px;
@@ -691,6 +703,11 @@ justify-content: center;
     letter-spacing: 0.04em;
     text-align: center;
     color: #fff;
+}
+.button-send{
+    background-color: #4D5AE5;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-send:hover{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
