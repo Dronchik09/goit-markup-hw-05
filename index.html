@@ -390,14 +390,12 @@
     </ul>
 </div>
 <div class="type-window">
-    <p name="type-window"class="footer-subtitle-wrap">Subscribe</p>
+    <p class="footer-subtitle-wrap">Subscribe</p>
     <div class="footer-email">
         <input
         type="email"
         class="input-window"
         placeholder="E-mail"/>
-    </label>
-    
         <button type="button" class="footer-button"><span class="footer-button-text">Subscribe</span>
             <svg class="footer-button-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
@@ -423,7 +421,8 @@
     <input 
     type="text" 
     name="user-name"
-    class="modal-input" />
+    class="modal-input"
+    id="user-name" />
     <svg class="modal-icon" width="12" height="12">
         <use href="./images/icons.svg#icon-Name"></use>
     </svg>
@@ -435,7 +434,8 @@
     <input 
     type="tel" 
     name="user-tel"
-    class="modal-input" />
+    class="modal-input"
+    id="user-tel" />
     <svg class="modal-icon" width="12" height="12">
         <use href="./images/icons.svg#icon-number"></use>
     </svg>
@@ -447,7 +447,8 @@
     <input 
     type="email" 
     name="user-email"
-    class="modal-input" />
+    class="modal-input"
+    id="user-email" />
     <svg class="modal-icon" width="12" height="12">
         <use href="./images/icons.svg#icon-email"></use>
     </svg>
@@ -455,7 +456,7 @@
 </div>
 <div class="modal-field-textarea">
     <label for="user-comment" class="modal-label">Comment</label>
-    <textarea name="user-comment" class="modal-textarea" placeholder="Text input"></textarea>
+    <textarea name="user-comment" id="user-comment" class="modal-textarea" placeholder="Text input"></textarea>
 </div>
 <div class="modal-field">
     <input type="checkbox" 
